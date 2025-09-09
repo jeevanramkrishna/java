@@ -1,0 +1,29 @@
+public class Main {
+    public static void main(String[] args) {
+        // Create an instance of Class C to trigger constructor calls
+        C objC = new C();
+    }
+}
+
+class A {
+    // Constructor for Class A
+    public A() {
+        System.out.println("Hello, I am A");
+    }
+}
+
+class B extends A {
+    // Constructor for Class B
+    public B() {
+        super(); // Explicitly call parent class (A) constructor
+        System.out.println("Hello, I am B");
+    }
+}
+
+class C extends B {
+    // Constructor for Class C
+    public C() {
+        super(); // Explicitly call parent class (B) constructor
+        System.out.println("Hello, I am C");
+    }
+}
